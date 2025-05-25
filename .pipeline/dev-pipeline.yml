@@ -1,0 +1,32 @@
+name: Dev-Pipeline
+
+trigger: 
+  batch: true
+  branches:
+    include: 
+    - main
+  paths:
+    include:
+    - '/environments/dev/dev.terraform.tfvars'
+
+pool: Daisy Game Pool
+
+  
+stages:
+- stage: Terratest
+  displayName: Terratest
+  jobs:
+    - job: TerratestJob
+      steps:
+      - task: CmdLine@2
+        inputs:
+          script: |
+            cd $(System.DefaultWorkingDirectory)
+            go mod init $(Build.BuilId)
+            go mod tidy
+            cd $(System.DefaultWorkingDirectory)/test
+            go test -v ben_test.go -timeout 30m
+
+- template: 'templates/template.yml'
+  parameters:
+    environments: dev

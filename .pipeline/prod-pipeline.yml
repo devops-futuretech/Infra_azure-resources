@@ -1,0 +1,17 @@
+name: Prod-Pipeline
+
+trigger: 
+  batch: true
+  branches:
+    include: 
+    - main
+  paths:
+    include:
+    - '/environments/dev/prod.terraform.tfvars'
+
+pool: Daisy Game Pool
+
+stages:
+- template: 'templates/template.yml'
+  parameters:
+    environments: prod
