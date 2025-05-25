@@ -8,6 +8,6 @@ output "rgs-name-id" {
 #   value = module.module-win-vms.vm-public-ip
 # }
 
-output "vnet-ids-space" {
-  value = module.module-vnets.vnet-ids-space
-}
+# output "vnet-ids-space" {
+#   value = module.module-vnets.vnet-ids-space
+# }
