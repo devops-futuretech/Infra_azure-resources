@@ -6,7 +6,11 @@ dev-rgs = {
     location = "westeurope"
     tags     = { environment = "dev" }
   }
-
+rg2 = {
+    name     = "rg-vijendra2"
+    location = "westeurope"
+    
+  }
 }
 
 
