@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: dharvik-pod1
+  name: dharvik-pod2
   labels: 
     papa: vijendra
 spec: 
@@ -9,10 +9,10 @@ spec:
     # - name: nginx
     #   image: nginx
     #   ports: 80
-    - name: netflix
-      image: nginx:latest
-      ports: 
-        - containerPort: 80
+    # - name: netflix
+    #   image: nginx:latest
+    #   ports: 
+    #     - containerPort: 80
     - name: firefox
       image: linuxserver/firefox
       ports: 
