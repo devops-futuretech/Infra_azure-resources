@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: netflix-pod4
+  labels: 
+    chacha: dhondu
+spec: 
+  containers: 
+    - name: nginetflix
+      image: devopsinsiders/netflix-clone
+      ports: 
+      - containerPort: 80
+    # - name: firefox
+    #   image: linuxserver/firefox
+    #   ports: 
+    #     - containerPort: 3000
+        

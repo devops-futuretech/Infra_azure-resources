@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dharvik-pod3
+  labels: 
+    chacha: vijendra
+spec: 
+  containers: 
+    - name: nginx
+      image: nginx:latest
+      ports: 
+        - containerPort: 80
+    # - name: firefox
+    #   image: linuxserver/firefox
+    #   ports: 
+    #     - containerPort: 3000
+        
