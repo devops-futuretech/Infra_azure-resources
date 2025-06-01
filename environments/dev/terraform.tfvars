@@ -223,7 +223,7 @@ dev-asgs = {
 
 dev-keyvaults = {
   kv1 = {
-    name                       = "vasukeyvault"
+    name                       = "vasukeyvault446"
     location                   = "westeurope"
     resource_group_name        = "rg-vijendra1"
     soft_delete_retention_days = 7
@@ -256,7 +256,7 @@ dev-linux-vms={
     allocation_method             = "Static"
     nsg_name                      = "vijendravm-nsg"
     asgs_name                     = "AppWeb"
-    kv_name="vasukeyvault"
+    kv_name="vasukeyvault446"
   }
   vm2 = {
     vm_name                       = "Backendvm-vasu"
@@ -277,6 +277,6 @@ dev-linux-vms={
     allocation_method             = "Static"
     nsg_name                      = "vijendravm-nsg"
     asgs_name                     = "AppWeb"
-    kv_name="vasukeyvault"
+    kv_name="vasukeyvault446"
   }
 }
