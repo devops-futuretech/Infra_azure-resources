@@ -1,7 +1,7 @@
 
 dev-rgs = {
 
-  rg3 = {
+  rg1 = {
     name     = "rg-vijendra1"
     location = "westeurope"
     tags     = { environment = "dev" }
