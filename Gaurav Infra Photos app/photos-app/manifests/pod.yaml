@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: photos-app
+spec:
+  containers:
+    - name: photos-app
+      image: ghatak.azurecr.io/photos-app:v2
+      ports:
+        - containerPort: 8501
+      volumeMounts:
+        - mountPath: /app/photos
+          name: 4gb-volume
+  volumes:
+    - emptyDir:
+        sizeLimit: 4Gi
+      name: 4gb-volume
+    - hostPath:
+        path: /opt/photos
+      name: host-path-volume
